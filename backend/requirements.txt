@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+tree-sitter
+neo4j
+qdrant-client
+langgraph
+openai
+gitpython
+ripgrep
+node-fetch

@@ -1,0 +1,30 @@
+{
+  "name": "project-brain",
+  "displayName": "Project Brain AI",
+  "description": "Self-hosted Cursor-class AI assistant",
+  "version": "1.0.0",
+  "publisher": "ramesh-babu-n",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "onCommand:projectBrain.ask"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "projectBrain.ask",
+        "title": "Project Brain: Ask AI"
+      }
+    ]
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "compile": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vscode": "^1.1.37"
+  }
+}
