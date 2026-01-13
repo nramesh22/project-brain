@@ -1,8 +1,6 @@
 import * as vscode from "vscode";
-import fetch from "node-fetch";
 
 export function activate(context: vscode.ExtensionContext) {
-
   const disposable = vscode.commands.registerCommand(
     "projectBrain.ask",
     async () => {
@@ -23,13 +21,19 @@ export function activate(context: vscode.ExtensionContext) {
         file: editor.document.fileName
       };
 
-      const res = await fetch("http://localhost:8000/edit", {
+      const res = await fetch("http://172.18.1.157:8800/edit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
 
-      const json = await res.json();
+      if (!res.ok) {
+        vscode.window.showErrorMessage(`Project Brain failed: ${res.status}`);
+        return;
+      }
+
+      await res.json();
+
       vscode.window.showInformationMessage("Project Brain applied changes");
     }
   );

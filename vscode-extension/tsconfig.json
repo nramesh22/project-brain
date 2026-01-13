@@ -4,6 +4,8 @@
     "target": "es2022",
     "outDir": "dist",
     "rootDir": "src",
-    "strict": true
+    "strict": true,
+    "moduleResolution": "node",
+    "lib": ["es2022", "dom"]
   }
 }
