@@ -4,7 +4,7 @@ services:
   projectbrain:
     build: ./backend
     ports:
-      - "8000:8000"
+      - "8800:8800"
     env_file:
       - .env
     volumes:

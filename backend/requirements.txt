@@ -1,10 +1,11 @@
 fastapi
 uvicorn
-tree-sitter
 neo4j
 qdrant-client
-langgraph
-openai
 gitpython
 ripgrep
-node-fetch
+openai
+langgraph
+tree-sitter>=0.22
+tree-sitter-python
+

@@ -1,12 +1,14 @@
 import os
-from tree_sitter import Language, Parser
 from graph import upsert_file, upsert_function
 from embeddings import store
 
-# Tree-sitter setup
-PY_LANGUAGE = Language("build/my-languages.so", "python")
+from tree_sitter import Parser, Language
+import tree_sitter_python
+
+PY_LANGUAGE = Language(tree_sitter_python.language())
+
 parser = Parser()
-parser.set_language(PY_LANGUAGE)
+parser.language = PY_LANGUAGE
 
 def index_repo(root):
     for dirpath, _, files in os.walk(root):
