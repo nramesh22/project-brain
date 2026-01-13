@@ -1,9 +1,3 @@
-Here is a **production-quality `README.md`** for your VS Code extension.
-
-You can copy this directly into `README.md` in the root of your extension.
-
----
-
 # **Project Brain AI — VS Code Extension**
 
 Project Brain AI is a self-hosted, Cursor-class AI coding assistant for Visual Studio Code.
@@ -134,5 +128,3 @@ project-brain-1.0.0.vsix
 * TypeScript
 * Native Node.js `fetch()`
 * Custom AI orchestration backend
-
---
